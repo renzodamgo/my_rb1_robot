@@ -2,11 +2,11 @@
 <robot name="my_rb1_robot">
 
     
-    <gazebo reference="caster_front">
+    <gazebo reference="front_caster">
         <mu1>0.0</mu1>
         <mu2>0.0</mu2>
     </gazebo>
-    <gazebo reference="caster_back">
+    <gazebo reference="back_caster">
         <mu1>0.0</mu1>
         <mu2>0.0</mu2>
     </gazebo>
