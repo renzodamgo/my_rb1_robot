@@ -124,5 +124,17 @@
         <parent link="base_link"/>
         <child link="front_caster"/>
     </joint>
+    
+    <!-- Link representing the front laser scanner -->
+    <!--For this robot, the laser is not visible, so we won't define a body for it. -->
+    <link name="front_laser">
+    </link>
 
+    <!-- Joint connecting base_link and front_laser -->
+    <!-- TO DO: Set correct joint type -->
+    <joint name="base_link_front_laser_joint" type="fixed">
+        <origin xyz="0.25, 0.0, 0.075" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="front_laser"/>
+    </joint>
 </robot>
