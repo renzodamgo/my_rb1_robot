@@ -91,12 +91,12 @@
     <visual>
     <geometry>
             <sphere radius="0.025"/>
-        <geometry/>
+        </geometry>
     </visual>
     <collision>
         <geometry>
             <sphere radius="0.025"/>
-        <geometry/>
+        </geometry/>
     </collision>
   </link>
 
@@ -110,12 +110,12 @@
     <visual>
     <geometry>
             <sphere radius="0.025"/>
-        <geometry/>
+        </geometry>
     </visual>
     <collision>
         <geometry>
             <sphere radius="0.025"/>
-        <geometry/>
+        </geometry>
     </collision>
   </link>
 
