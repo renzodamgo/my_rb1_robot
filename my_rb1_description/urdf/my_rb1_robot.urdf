@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 <robot name="my_rb1_robot">
+
+    
     <gazebo reference="caster_front">
         <mu1>0.0</mu1>
         <mu2>0.0</mu2>
@@ -8,6 +10,29 @@
         <mu1>0.0</mu1>
         <mu2>0.0</mu2>
     </gazebo>
+
+        <!-- Define materials for visualization -->
+    <material name="blue">
+        <color rgba="0 0 1 1"/>
+    </material>
+
+    <material name="gray">
+        <color rgba="0.40 0.40 0.40 1"/>
+    </material>
+
+    <material name="red">
+        <color rgba="1 0 0 1"/>
+    </material>
+
+    <!-- Base footprint link -->
+    <link name="base_footprint">
+    </link>
+
+    <joint name="base_link_plate_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="base_footprint"/>
+        <child link="base_link">
+    </joint>
 
   <link name="base_link">
     <visual>
