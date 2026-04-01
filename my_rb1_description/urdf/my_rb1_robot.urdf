@@ -87,34 +87,42 @@
         <axis xyz="0 1 0"/>
     </joint>
 
-  <link name="caster_front">
+  <link name="front_caster">
     <visual>
-    <origin xyz="-0.1 0.0 -0.15" rpy="0 0 0"/>
     <geometry>
             <sphere radius="0.025">
         <geometry/>
     </visual>
     <collision>
-    <origin xyz="-0.1 0.0 -0.15" rpy="0 0 0"/>
         <geometry>
             <sphere radius="0.025">
         <geometry/>
     </collision>
   </link>
 
-  <link name="caster_back">
+    <joint name="base_link_front_caster_joint" type="fixed">
+        <origin xyz="-0.1 0.0 -0.15" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="front_caster"/>
+    </joint>
+
+  <link name="back_caster">
     <visual>
-    <origin xyz="0.1 0.0 -0.15" rpy="0 0 0"/>
     <geometry>
             <sphere radius="0.025">
         <geometry/>
     </visual>
     <collision>
-    <origin xyz="0.1 0.0 -0.15" rpy="0 0 0"/>
         <geometry>
             <sphere radius="0.025">
         <geometry/>
     </collision>
   </link>
+
+      <joint name="base_link_back_caster_joint" type="fixed">
+        <origin xyz="0.1 0.0 -0.15" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="front_caster"/>
+    </joint>
 
 </robot>
