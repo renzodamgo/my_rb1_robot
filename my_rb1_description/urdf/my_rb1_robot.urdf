@@ -31,7 +31,7 @@
     <joint name="base_link_plate_joint" type="fixed">
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="base_footprint"/>
-        <child link="base_link">
+        <child link="base_link"/>
     </joint>
 
   <link name="base_link">
@@ -62,7 +62,7 @@
 
     <joint name="base_link_left_wheel_joint" type="continuous">
         <parent link="base_link"/>
-        <child link="right_wheel"/>
+        <child link="left_wheel"/>
         <origin xyz="0 0.2 -0.15" rpy="0 0 0"/>
         <axis xyz="0 1 0"/>
     </joint>
@@ -83,19 +83,19 @@
     <joint name="base_link_right_wheel_joint" type="continuous">
         <parent link="base_link"/>
         <child link="right_wheel"/>
-        <origin xyz="0 0.2 -0.15" rpy="0 0 0"/> 
+        <origin xyz="0 -0.2 -0.15" rpy="0 0 0"/> 
         <axis xyz="0 1 0"/>
     </joint>
 
   <link name="front_caster">
     <visual>
     <geometry>
-            <sphere radius="0.025">
+            <sphere radius="0.025"/>
         <geometry/>
     </visual>
     <collision>
         <geometry>
-            <sphere radius="0.025">
+            <sphere radius="0.025"/>
         <geometry/>
     </collision>
   </link>
@@ -109,12 +109,12 @@
   <link name="back_caster">
     <visual>
     <geometry>
-            <sphere radius="0.025">
+            <sphere radius="0.025"/>
         <geometry/>
     </visual>
     <collision>
         <geometry>
-            <sphere radius="0.025">
+            <sphere radius="0.025"/>
         <geometry/>
     </collision>
   </link>
@@ -122,7 +122,7 @@
       <joint name="base_link_back_caster_joint" type="fixed">
         <origin xyz="0.1 0.0 -0.15" rpy="0 0 0"/>
         <parent link="base_link"/>
-        <child link="front_caster"/>
+        <child link="back_caster"/>
     </joint>
     
     <!-- Link representing the front laser scanner -->
@@ -133,7 +133,7 @@
     <!-- Joint connecting base_link and front_laser -->
     <!-- TO DO: Set correct joint type -->
     <joint name="base_link_front_laser_joint" type="fixed">
-        <origin xyz="0.25, 0.0, 0.075" rpy="0 0 0"/>
+        <origin xyz="0.25 0.0 0.075" rpy="3.1416 0 0"/>
         <parent link="base_link"/>
         <child link="front_laser"/>
     </joint>
