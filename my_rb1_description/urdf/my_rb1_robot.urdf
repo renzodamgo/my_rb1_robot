@@ -47,36 +47,45 @@
     </collision>
   </link>
 
-  <link name="wheel_left">
+  <link name="left_wheel">
       <visual>
-      <origin xyz="0 -0.2 -0.15" rpy="0 0 0"/>
       <geometry>
           <cylinder radius="0.005" length="0.005"/>
       </geometry>
     </visual>
     <collision>
-            <origin xyz="0 -0.2 -0.15" rpy="0 0 0"/>
       <geometry>
           <cylinder radius="0.005" length="0.005"/>
       </geometry>
     </collision>   
   </link>
 
+    <joint name="base_link_left_wheel_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="right_wheel"/>
+        <origin xyz="0 0.2 -0.15" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
 
-  <link name="wheel_right">
-        <visual>
-      <origin xyz="0 0.2 -0.15" rpy="0 0 0"/>
+  <link name="right_wheel">
+    <visual>
       <geometry>
           <cylinder radius="0.005" length="0.005"/>
       </geometry>
     </visual>
     <collision>
-            <origin xyz="0 0.2 -0.15" rpy="0 0 0"/>
       <geometry>
           <cylinder radius="0.005" length="0.005"/>
       </geometry>
     </collision>   
   </link>
+
+    <joint name="base_link_right_wheel_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="right_wheel"/>
+        <origin xyz="0 0.2 -0.15" rpy="0 0 0"/> 
+        <axis xyz="0 1 0"/>
+    </joint>
 
   <link name="caster_front">
     <visual>
