@@ -12,6 +12,12 @@ def generate_launch_description():
         'my_rb1_robot.urdf'
     )
 
+    rviz_config_file = os.path.join(
+        get_package_share_directory('my_rb1_description'),
+        'rviz',
+        'config.rviz'  
+    )
+
     with open(urdf_file, 'r') as f:
         robot_description = f.read()
 
@@ -31,6 +37,7 @@ def generate_launch_description():
         Node(
             package='rviz2',
             executable='rviz2',
+            arguments=['-d', rviz_config_file],
         ),
 
     ])

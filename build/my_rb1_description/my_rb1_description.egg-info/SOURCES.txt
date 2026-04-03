@@ -10,6 +10,7 @@ setup.py
 launch/display.launch.py
 my_rb1_description/__init__.py
 resource/my_rb1_description
+rviz/config.rviz
 test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py

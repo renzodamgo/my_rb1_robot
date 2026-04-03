@@ -4,6 +4,7 @@
 /home/user/ros2_ws/src/my_rb1_robot/install/my_rb1_description/share/my_rb1_description/package.xml
 /home/user/ros2_ws/src/my_rb1_robot/install/my_rb1_description/share/my_rb1_description/launch/display.launch.py
 /home/user/ros2_ws/src/my_rb1_robot/install/my_rb1_description/share/my_rb1_description/urdf/my_rb1_robot.urdf
+/home/user/ros2_ws/src/my_rb1_robot/install/my_rb1_description/share/my_rb1_description/rviz/config.rviz
 /home/user/ros2_ws/src/my_rb1_robot/install/my_rb1_description/lib/python3.12/site-packages/my_rb1_description-0.0.0-py3.12.egg-info/PKG-INFO
 /home/user/ros2_ws/src/my_rb1_robot/install/my_rb1_description/lib/python3.12/site-packages/my_rb1_description-0.0.0-py3.12.egg-info/zip-safe
 /home/user/ros2_ws/src/my_rb1_robot/install/my_rb1_description/lib/python3.12/site-packages/my_rb1_description-0.0.0-py3.12.egg-info/top_level.txt
