@@ -54,9 +54,24 @@ def generate_launch_description():
         output="screen",
     )
 
+    gz_bridge = Node(
+        package='ros_gz_bridge',
+        executable='parameter_bridge',
+        name='ros_gz_bridge',
+        arguments=[
+            '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
+            '/cmd_vel@geometry_msgs/msg/Twist]gz.msgs.Twist',
+            '/tf@tf2_msgs/msg/TFMessage[gz.msgs.Pose_V',
+            '/odom@nav_msgs/msg/Odometry[gz.msgs.Odometry',
+            '/scan@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan'
+        ],
+        output='screen'
+    )
+
     return LaunchDescription([
         SetParameter(name="use_sim_time", value=True),
         robot_state_publisher_node,
+        gz_bridge,
         declare_spawn_x,
         declare_spawn_y,
         declare_spawn_z,
